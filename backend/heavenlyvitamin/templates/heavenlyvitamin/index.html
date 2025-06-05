@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List</title>
+</head>
+<body>
+    <h1>Products</h1>
+    {% if product_list %}
+        <ul>
+        {% for product in product_list %}
+            <li>
+                {{ product.product_name }} - ${{ product.price }}
+                <br>
+                Brand: {{ product.brand }}
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No products are available.</p>
+    {% endif %}
+</body>
+</html>
